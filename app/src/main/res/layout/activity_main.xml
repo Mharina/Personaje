@@ -30,7 +30,71 @@
         android:layout_margin="10dp"
         android:ems="10"
         android:hint="Nombre"
-        android:inputType="text" />
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raza"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinnerRaza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/raza"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clase"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinnerClase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/clase"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado Vital"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinnerEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/estadoVital"
+            android:minHeight="48dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,66 +102,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Raza"
-                android:textSize="18sp" />
-
-            <Spinner
-                android:id="@+id/spinner4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/raza" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Clase"
-                android:textSize="18sp" />
-
-            <Spinner
-                android:id="@+id/spinner5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/clase" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Estado Vital"
-                android:textSize="18sp" />
-
-            <Spinner
-                android:id="@+id/spinner6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/estadoVital" />
-        </LinearLayout>
 
     </LinearLayout>
 
