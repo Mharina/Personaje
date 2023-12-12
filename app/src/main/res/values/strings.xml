@@ -17,4 +17,9 @@
         <item>Anciano</item>
     </string-array>
     <string name="titulo">Creación de personaje</string>
+    <string name="nombre">Nombre</string>
+    <string name="personaje">TODO</string>
+    <string name="raza">Raza</string>
+    <string name="clase">Clase</string>
+    <string name="estado_vital">Estado Vital</string>
 </resources>

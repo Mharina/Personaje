@@ -14,16 +14,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val spinnerRaza: Spinner = findViewById(R.id.spinnerRaza)
-        val spinnerClase: Spinner = findViewById(R.id.spinnerClase)
-        val foto: ImageView = findViewById(R.id.imageView)
+        var spinnerRaza: Spinner = findViewById(R.id.spinnerRaza)
+        var spinnerClase: Spinner = findViewById(R.id.spinnerClase)
+        var foto: ImageView = findViewById(R.id.imageView)
 
-        val opcionesRaza: Array<String> = resources.getStringArray(R.array.raza)
-        val opcionesClase: Array<String> = resources.getStringArray(R.array.clase)
+        var opcionesRaza: Array<String> = resources.getStringArray(R.array.raza)
+        var opcionesClase: Array<String> = resources.getStringArray(R.array.clase)
 
-        val adapterRaza: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesRaza)
+        var adapterRaza: ArrayAdapter<String> =
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesRaza)
         spinnerRaza.adapter = adapterRaza
-        val adapterClase: ArrayAdapter<String> = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesClase)
+        var adapterClase: ArrayAdapter<String> =
+            ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesClase)
         spinnerClase.adapter = adapterClase
 
         spinnerRaza.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -33,76 +35,77 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                val seleccionRaza: String = parent?.getItemAtPosition(position) as String
-                val seleccionClase: String = spinnerClase.selectedItem as String
-                val imagenResId: String = obtenerImagen(seleccionRaza, seleccionClase)
-
+                var seleccionRaza: String = parent?.getItemAtPosition(position) as String
+                var seleccionClase: String = spinnerClase.selectedItem as String
+                obtenerImagen(foto,seleccionRaza,seleccionClase)
             }
-            fun obtenerImagen(seleccionRaza: String, seleccionClase: String): String {
-                var foto:String
-                foto=""
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
+    }
+            private fun obtenerImagen(foto: ImageView, seleccionRaza: String, seleccionClase: String) {
+
                 when (seleccionRaza){
                     "Humano" -> {
                         when (seleccionClase) {
                             "Mago" -> {
-                                foto="@drawable/humanomago"
+                                foto.setImageResource(R.drawable.humanomago)
                             }
                             "Brujo" -> {
-                                foto="@drawable/humanobrujo"
+                                foto.setImageResource(R.drawable.humanobrujo)
                             }
                             "Guerrero" -> {
-                                foto="@drawable/humanoguerrero"
+                                foto.setImageResource(R.drawable.humanoguerrero)
                             }
                         }
                     }
                     "Elfo" -> {
                         when (seleccionClase) {
                             "Mago" -> {
-                                foto="@drawable/elfomago.jpg"
+                                foto.setImageResource(R.drawable.elfomago)
                             }
                             "Brujo" -> {
-                                foto="@drawable/elfobrujo.jpg"
+                                foto.setImageResource(R.drawable.elfobrujo)
                             }
                             "Guerrero" -> {
-                                foto="@drawable/elfoguerrero.jpg"
+                                foto.setImageResource(R.drawable.elfoguerrero)
                             }
                         }
                     }
                     "Enano" -> {
                         when (seleccionClase) {
                             "Mago" -> {
-                                foto="@drawable/enanomago.jpg"
+                                foto.setImageResource(R.drawable.enanomago)
                             }
                             "Brujo" -> {
-                                foto="@drawable/enanobrujo.jpg"
+                                foto.setImageResource(R.drawable.enanobrujo)
                             }
                             "Guerrero" -> {
-                                foto="@drawable/enanoguerrero.jpg"
+                                foto.setImageResource(R.drawable.enanoguerrero)
                             }
                         }
                     }
                     "Maldito" -> {
                         when (seleccionClase) {
                             "Mago" -> {
-                                foto="@drawable/malditomago.jpg"
+                                foto.setImageResource(R.drawable.malditomago)
                             }
                             "Brujo" -> {
-                                foto="@drawable/malditobrujo.jpg"
+                                foto.setImageResource(R.drawable.malditobrujo)
                             }
                             "Guerrero" -> {
-                                foto="@drawable/malditoguerrero.jpg"
+                                foto.setImageResource(R.drawable.malditoguerrero)
                             }
                         }
                     }
                 }
 
-                return foto
             }
-        }
+}
 
         //sC.onItemSelectedListener = object
 
 
-    }
 
-}
+
