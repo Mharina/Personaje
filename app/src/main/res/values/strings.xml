@@ -12,7 +12,7 @@
         <item>Guerrero</item>
     </string-array>
     <string-array name="estadoVital">
-        <item>Joven</item>
+        <item>Adolescente</item>
         <item>Adulto</item>
         <item>Anciano</item>
     </string-array>
