@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             ) {
                 var seleccionEstadoVital: String = parent?.getItemAtPosition(position) as String
                 var seleccionRaza: String = spinnerRaza.selectedItem as String
-                var seleccionClase: String = spinnerEstadoVital.selectedItem as String
+                var seleccionClase: String = spinnerClase.selectedItem as String
                 obtenerImagen3(foto, seleccionRaza, seleccionClase, seleccionEstadoVital)
             }
 
@@ -206,7 +206,7 @@ class MainActivity : AppCompatActivity() {
                     "Mago" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.elfoadolescentemago)
                             }
 
                             "Adulto" -> {
@@ -214,7 +214,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.elfomagoanciano)
                             }
                         }
                     }
@@ -222,7 +222,7 @@ class MainActivity : AppCompatActivity() {
                     "Brujo" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.elfobrujoadolescente2)
                             }
 
                             "Adulto" -> {
@@ -230,7 +230,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.elfobrujoanciano)
                             }
                         }
                     }
@@ -246,7 +246,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.elfoguerreroanciano)
                             }
                         }
                     }
@@ -258,7 +258,7 @@ class MainActivity : AppCompatActivity() {
                     "Mago" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.enanomagoadolescente2)
                             }
 
                             "Adulto" -> {
@@ -274,7 +274,7 @@ class MainActivity : AppCompatActivity() {
                     "Brujo" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.enanobrujoadolescente)
                             }
 
                             "Adulto" -> {
@@ -290,7 +290,7 @@ class MainActivity : AppCompatActivity() {
                     "Guerrero" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.enanoguerreroadolescente)
                             }
 
                             "Adulto" -> {
@@ -314,7 +314,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Adulto" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.malditomagoadulto)
                             }
 
                             "Anciano" -> {
