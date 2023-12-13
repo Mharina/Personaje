@@ -43,6 +43,21 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
+        spinnerClase.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                var seleccionClase: String = parent?.getItemAtPosition(position) as String
+                var seleccionRaza: String = spinnerRaza.selectedItem as String
+                obtenerImagen(foto,seleccionRaza,seleccionClase)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+        }
     }
             private fun obtenerImagen(foto: ImageView, seleccionRaza: String, seleccionClase: String) {
 
