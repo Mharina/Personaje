@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
             ) {
                 var seleccionRaza: String = parent?.getItemAtPosition(position) as String
                 var seleccionClase: String = spinnerClase.selectedItem as String
-                //var seleccionEstadoVital: String = spinnerEstadoVital.selectedItem as String
-                obtenerImagen(foto, seleccionRaza, seleccionClase)
+                var seleccionEstadoVital: String = spinnerEstadoVital.selectedItem as String
+                obtenerImagen3(foto, seleccionRaza, seleccionClase, seleccionEstadoVital)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
             ) {
                 var seleccionClase: String = parent?.getItemAtPosition(position) as String
                 var seleccionRaza: String = spinnerRaza.selectedItem as String
-                //var seleccionEstadoVital: String = spinnerEstadoVital.selectedItem as String
-                obtenerImagen(foto, seleccionRaza, seleccionClase)
+                var seleccionEstadoVital: String = spinnerEstadoVital.selectedItem as String
+                obtenerImagen3(foto, seleccionRaza, seleccionClase, seleccionEstadoVital)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -154,11 +154,11 @@ class MainActivity : AppCompatActivity() {
                     "Mago" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.humanomagoadolescente)
                             }
 
                             "Adulto" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.humanomagoadulto)
                             }
 
                             "Anciano" -> {
@@ -170,7 +170,7 @@ class MainActivity : AppCompatActivity() {
                     "Brujo" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.humanobrujoadolescente)
                             }
 
                             "Adulto" -> {
@@ -178,7 +178,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.humanobrujoanciano)
                             }
                         }
                     }
@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity() {
                     "Guerrero" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.humanoguerreroadolescente)
                             }
 
                             "Adulto" -> {
@@ -194,7 +194,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.humanoguerreroanciano)
                             }
                         }
                     }
@@ -238,7 +238,7 @@ class MainActivity : AppCompatActivity() {
                     "Guerrero" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.elfoguerreroadolescente)
                             }
 
                             "Adulto" -> {
@@ -262,7 +262,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Adulto" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.enanomagoadulto)
                             }
 
                             "Anciano" -> {
@@ -278,7 +278,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Adulto" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.enanobrujoadulto)
                             }
 
                             "Anciano" -> {
@@ -298,7 +298,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.enanoguerreroanciano)
                             }
                         }
                     }
@@ -310,7 +310,7 @@ class MainActivity : AppCompatActivity() {
                     "Mago" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.malditomagoadolescente)
                             }
 
                             "Adulto" -> {
@@ -326,7 +326,7 @@ class MainActivity : AppCompatActivity() {
                     "Brujo" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.malditobrujoadolescente)
                             }
 
                             "Adulto" -> {
@@ -334,7 +334,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.malditobrujoanciano)
                             }
                         }
                     }
@@ -342,7 +342,7 @@ class MainActivity : AppCompatActivity() {
                     "Guerrero" -> {
                         when (seleccionEstadoVital) {
                             "Adolescente" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.malditoguerreroadolescente)
                             }
 
                             "Adulto" -> {
@@ -350,7 +350,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                             "Anciano" -> {
-                                foto.setImageResource(R.drawable.comodin)
+                                foto.setImageResource(R.drawable.malditoguerreroanciano)
                             }
                         }
                     }
