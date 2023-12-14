@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/paredbuena"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -31,18 +32,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:autofillHints=""
+        android:background="#CCD3D6B3"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="text"
         android:minHeight="48dp"
-        android:textColorHint="#8D6E63"
-        android:autofillHints="" />
+        android:paddingLeft="10dp"
+        android:textColorHint="#80000000" />
 
     <LinearLayout
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="5dp"
+        android:background="#80D3D6B3"
         android:orientation="vertical">
 
         <TextView
@@ -50,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/raza"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <Spinner
@@ -65,12 +70,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="5dp"
+        android:background="#80D3D6B3"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#80D3D6B3"
             android:text="@string/clase"
             android:textSize="18sp" />
 
@@ -78,6 +85,7 @@
             android:id="@+id/spinnerClase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#80D3D6B3"
             android:entries="@array/clase"
             android:minHeight="48dp" />
     </LinearLayout>
@@ -87,6 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="5dp"
+        android:background="#80D3D6B3"
         android:orientation="vertical">
 
         <TextView
